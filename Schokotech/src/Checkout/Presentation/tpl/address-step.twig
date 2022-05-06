@@ -1,0 +1,141 @@
+{% extends "Application/Presentation/tpl/layout.twig" %}
+
+{% block content %}
+    {% include 'Checkout/Presentation/tpl/partials/checkout-navigation.twig' %}
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <a href="customer-step">
+                        <input type="button" class="update-cart-button" value="Zurück">
+                    </a>
+                </div>
+            </div>
+            <form method="post" action="address-step-save" id="asd">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-6 offset-6">
+                                <label><b>Rechnungsadresse:</b></label>
+                            </div>
+                        </div>
+                        <div class="white-space"></div>
+                        <div class="row">
+                            <label class="col-2 offset-4 align-self-end">Anrede:</label>
+                            <div class="col-1">
+                                <select name="address-step-billingSalutation">
+                                    <option disabled {% if addressStep.billingSalutation is null %}selected{% endif %} value> -- bitte wählen -- </option>
+                                    <option {% if addressStep.billingSalutation == "Frau" %}selected{% endif %} value="Frau">Frau</option>
+                                    <option {% if addressStep.billingSalutation == "Herr" %}selected{% endif %} value="Herr">Herr</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-4 align-self-end">Vorname:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-billingName" value="{{ addressStep.billingName }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-4 align-self-end">Nachname:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-billingSurname" value="{{ addressStep.billingSurname }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-4 align-self-end">Straße:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-billingStreetAddress" value="{{ addressStep.billingStreetAddress }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-4 align-self-end">Hausnummer:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-billingStreetNumber" value="{{ addressStep.billingStreetNumber }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-4 align-self-end">Postleitzahl:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-billingPostalCode" value="{{ addressStep.billingPostalCode }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-4 align-self-end">Firma:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-billingCompany" value="{{ addressStep.billingCompany }}">
+                            </div>
+                        </div>
+                        <div class="white-space"></div>
+                        <div class="row">
+                            <div class="col-4 offset-4">
+                                <label><input type="checkbox" name="checkboxBillingAddressSameAsShippingAddress" value="check" checked> Lieferadresse identisch <br>&nbsp; &nbsp; mit Rechnungsadresse</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 check">
+                        <div class="row">
+                            <div class="col-6 offset-3">
+                                <label><b>Lieferadresse</b>:</label>
+                            </div>
+                        </div>
+                        <div class="white-space"></div>
+                        <div class="row">
+                            <div class="col-2 offset-1">
+                                <label>Anrede:</label>
+                            </div>
+                            <div class="col-2">
+                                <select name="address-step-shippingSalutation">
+                                    <option disabled {% if addressStep.shippingSalutation is null %}selected{% endif %} value> -- bitte wählen -- </option>
+                                    <option {% if addressStep.shippingSalutation == "Frau" %}selected{% endif %} value="Frau">Frau</option>
+                                    <option {% if addressStep.shippingSalutation == "Herr" %}selected{% endif %} value="Herr">Herr</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-1 align-self-end">Vorname:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-shippingName" value="{{ addressStep.shippingName }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-1 align-self-end">Nachname:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-shippingSurname" value="{{ addressStep.shippingSurname }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-1 align-self-end">Straße:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-shippingStreetAddress" value="{{ addressStep.shippingStreetAddress }}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-1 align-self-end">Hausnummer:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-shippingStreetNumber" value="{{ addressStep.shippingStreetNumber }}" min="1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-1 align-self-end">Postleitzahl:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-shippingPostalCode" value="{{ addressStep.shippingPostalCode }}" >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-2 offset-1 align-self-end">Firma:</label>
+                            <div class="col-1">
+                                <input type="text" name="address-step-shippingCompany" value="{{ addressStep.shippingCompany }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button type="submit" class="offset-9 update-cart-button">Weiter</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+{% endblock %}

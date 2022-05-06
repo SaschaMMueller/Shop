@@ -1,0 +1,20 @@
+<div class="col-3">
+    <div class="product">
+        <a href= {{ product.url }}>
+            <div class="product-list-image">
+                <img src={{ product.imagePath }} height="300" width="300">
+            </div>
+            <div class="white-space"></div>
+            <div class="product-list-name">
+                <label>{{ product.name }}</label>
+            </div>
+            <div class="product-list-default-size">
+                <label>{{ product.productVariantsTransfers[0].sizeName }} g Tafel</label>
+            </div>
+            <div class="product-list-price">
+                <label>{{ product.productVariantsTransfers[0].price }} €</label>
+            </div>
+            <div class="white-space"></div>
+        </a>
+    </div>
+</div>

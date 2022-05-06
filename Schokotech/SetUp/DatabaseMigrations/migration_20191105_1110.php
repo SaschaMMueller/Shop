@@ -1,0 +1,2 @@
+RENAME TABLE category_localized_attribute TO category_localized_attributes;
+RENAME TABLE product_localized_attribute TO product_localized_attributes

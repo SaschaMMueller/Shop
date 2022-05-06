@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="category-tree">
+            <ul class="col-11 offset-2">
+                {% for category in categories %}
+                    <li class="nav-item-category-list{% if category.isActive == true %} active {% endif %}" name="nav-item">
+                        <a class="nav-link nav-bar-size" href="{{ category.seoUrl }}">{{ category.name }}</a>
+                        {% if category.subCategories | length > 0 %}
+                            <ul class="nav-bar-size" id="{{ category.seoUrl }}">
+                                {% for subcat in category.subCategories %}
+                                    <li class="dropdown-item dropdown-item-category-list {% if subcat.isActive == true %} active {% endif %}"><a id="{{ subcat.seoUrl }}" href="{{ subcat.seoUrl }}" style="text-decoration:none">{{ subcat.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

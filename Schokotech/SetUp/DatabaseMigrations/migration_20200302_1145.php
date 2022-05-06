@@ -1,0 +1,1 @@
+ALTER TABLE product_purchasable ADD price float;

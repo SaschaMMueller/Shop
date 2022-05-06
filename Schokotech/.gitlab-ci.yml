@@ -1,0 +1,16 @@
+stages:
+  - build
+  - dependencies
+  - fasttests
+  - slowtests
+  - deploy
+  - undeploy
+
+php-image:
+  stage: build
+  image: ${BUILDKIT_IMAGE}
+  script:
+    - ${BUILDKIT_SCRIPT}
+      --tag=${CONTRACTS_IMAGE}
+      --context=.
+      --file=cicd/container-images/php/Dockerfile

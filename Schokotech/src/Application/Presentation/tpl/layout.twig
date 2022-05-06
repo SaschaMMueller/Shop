@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'Application/Presentation/tpl/assets-includes.twig' %}
+        <link rel="icon" type="image/x-icon" href="Assets/Images/favicon.ico">
+        <title>{% block title %} Schokotech Shop{% endblock %} </title>
+    </head>
+    <body>
+        <div class="page-container">
+            <header>
+                {% include 'CmsBlock/Presentation/tpl/partials/header.twig' %}
+            </header>
+            <main>
+                <div id="content">
+                    {% block content %}{% endblock %}
+                </div>
+            </main>
+            <footer>
+                {% include 'CmsBlock/Presentation/tpl/partials/footer.twig' %}
+            </footer>
+        </div>
+    </body>
+</html>

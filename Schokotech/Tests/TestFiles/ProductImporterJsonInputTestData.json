@@ -1,0 +1,5 @@
+{
+  "product_attributes.xlsx": "[{\"sku\":\"test_sku\",\"image\":\"test_image_path\",\"category_key\":0,\"prices\":\"[{\\\"size\\\":\\\"100\\\",\\\"size_id\\\":\\\"buy\\\",\\\"price\\\":\\\"10\\\"}]\"}]",
+  "product_attributes_localized.csv": "[{\"sku\":\"test_sku\",\"name_de\":\"test_name_de\",\"name_en\":\"test_name_en\",\"description_de\":\"test_blub_de\",\"description_en\":\"test_blub_en\",\"attributes\":\"{\\\"ingredients\\\": [{\\\"de\\\": [\\\"test_attributes_de\\\"]},{\\\"en\\\": [\\\"test_attributes_en\\\"]}]}\"}]",
+  "product_stock.csv": "[{\"sku\":\"test_sku_buy\",\"stock\":\"10\"}]"
+}

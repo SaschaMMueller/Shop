@@ -1,0 +1,11 @@
+{% extends "Application/Presentation/tpl/layout.twig" %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">{% include 'Category/Presentation/tpl/navbar.twig' %}</div>
+            <div class="col-9">{% include 'Category/Presentation/tpl/product-list.twig' %}</div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+{% endblock %}

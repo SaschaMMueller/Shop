@@ -1,0 +1,10 @@
+name_de,name_en,description_de,description_en,category_key,parent_category_key,is_root
+Schokoladen,Chocolates,schoggi_de,schoggie_en,0,null,1
+Weisse Schokolade,White Chocolate,schoggi_de,schoggie_en,26,1,0
+Zartbitterschokolade,Dark Chocolate,schoggi_de,schoggie_en,74,1,0
+Milch Schokolade,Milk Chocolate,schoggi_de,schoggie_en,3,1,0
+Weisse Nuss Schokolade,White Nut Chocolate,schoggi_de,schoggie_en,98,2,0
+Weisse Nougat Schokolade,White Nougat Chocolate,schoggi_de,schoggie_en,9,2,0
+Vollmilch Schokolade,Full Fat Chocolate,schoggi_de,schoggie_en,12,4,0
+Magermilch Schokolade,Skimmed Milk Chocolate,schoggi_de,schoggie_en,7,4,0
+Soja Schokolade,Soja Chocolate,schoggi_de,schoggie_en,5,1,0

@@ -1,0 +1,7 @@
+sku,name_de,name_en,description_de,description_en,attributes
+111_222,Haselnuss Schokolade,Hazelnut chocolate,Vollmilch Schokolade mit Haselnüssen,Milk chocolate with hazelnuts,"{""ingredients"":[{""de"":[""Milch"",""Kakao 35%"",""Haselnuss"",""Zucker""]},{""en"":[""Milk"",""Cacoa 35%"",""Hazelnut"",""Sugar""]}]}"
+222_333,Zartbitter Schokolade,Bittersweet chocolate,Weiche zartbitter Schokolade,Soft bittersweet chocolate,"{""ingredients"":[{""de"":[""Milch"",""Kakao 80%"",""Zucker""]},{""en"":[""Milk"",""Cacoa 80%"",""Sugar""]}]}"
+333_444,Nugat Schokolade,Nugat chocolate,Dunkle Nugat Schokolade,Dunkle Nugat Schokolade,"{""ingredients"":[{""de"":[""Milch"",""Kakao 70%"",""Haselnuss"",""Zucker""]},{""en"":[""Milk"",""Cacoa 70%"",""Hazelnut"",""Sugar""]}]}"
+444_555,Karamell Schokolade,Karamell chocolate,Vollmilch Schokolade mit Karamell,Vollmilch Schokolade mit Karamell,"{""ingredients"":[{""de"":[""Milch"",""Kakao 35%"",""Karamel Syrop"",""Zucker""]},{""en"":[""Milk"",""Cacoa 35%"",""Caramel syrup"",""Sugar""]}]}"
+555_666,Dunkel Soja Schokolade,Dark Soja chocolate,Dunkle Soja Schokolade,Dunkle Soja Schokolade,"{""ingredients"":[{""de"":[""Milch"",""Kakao 80%"",""Soja"",""Zucker""]},{""en"":[""Milk"",""Cacoa 80%"",""Soja"",""Sugar""]}]}"
+666_777,Ligth Soja Schokolade,Ligth Soja chocolate,Fettreduzierte Soja Schokolade,Fettreduzierte Soja Schokolade,"{""ingredients"":[{""de"":[""Magermilch"",""Kakao 35%"",""Zucker""]},{""en"":[""Scimmed milk"",""Cacoa 35%"",""Sugar""]}]}"

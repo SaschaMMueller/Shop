@@ -1,0 +1,54 @@
+{% extends "Application/Presentation/tpl/layout.twig" %}
+
+{% block content %}
+    {% include 'Checkout/Presentation/tpl/partials/checkout-navigation.twig' %}
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-auto offset-3">
+                    <a href="cart">
+                        <input type="button" class="update-cart-button" value="Zurück">
+                    </a>
+                </div>
+            </div>
+            <div class="white-space"></div>
+            <form method="post" action="customer-step-save">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <div class="form-row">
+                            <label class="col-1 offset-2 align-self-end text-input">Vorname:</label>
+                            <div class="col-2">
+                                <input type="text" class="form-control" name="customer-step-name" value="{{ customerStep.customerName }}" placeholder="Vorname">
+                            </div>
+                            <label class="col-1 align-self-end text-input">Nachname:</label>
+                            <div class="col-2">
+                                <input type="text" class="form-control" name="customer-step-surname" value="{{ customerStep.customerSurname }}" placeholder="Nachname">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <div class="form-row">
+                            <label class="col-1 offset-2 align-self-end text-input">Email:</label>
+                            <div class="col-2">
+                                <input type="text" class="form-control" name="customer-step-email" value="{{ customerStep.email }}" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="white-space"></div>
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-10">
+                        <div class="form-row">
+                            <button type="submit" class="col-1 offset-7 update-cart-button">Weiter</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+{% endblock %}

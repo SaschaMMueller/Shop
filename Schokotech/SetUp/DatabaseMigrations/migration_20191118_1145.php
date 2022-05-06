@@ -1,0 +1,1 @@
+ALTER TABLE category ADD CONSTRAINT fk_parent FOREIGN KEY (parent) REFERENCES category(id);

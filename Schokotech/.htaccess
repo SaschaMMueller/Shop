@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !\.(css|js|png|ico)$
+RewriteCond %{REQUEST_URI} Shop/Schokotech/(.*[A-Z].*)$
+RewriteRule (.*) /Shop/Schokotech/${lc:$1} [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*$ index.php [NC]

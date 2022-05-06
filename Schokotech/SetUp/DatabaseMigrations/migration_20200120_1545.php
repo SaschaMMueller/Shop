@@ -1,0 +1,1 @@
+ALTER TABLE product_abstract CHANGE sku sku VARCHAR(100) NULL;

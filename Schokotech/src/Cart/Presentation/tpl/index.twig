@@ -1,0 +1,22 @@
+{% extends "Application/Presentation/tpl/layout.twig" %}
+
+{% block content %}
+    <body>
+    <div class="container-fluid">
+        {% if cartItemTransfers is not empty %}
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-7">
+                    {% include 'Cart/Presentation/tpl/partials/product-list.twig' %}
+                </div>
+                <div class="col-3">
+                    {% include 'Cart/Presentation/tpl/partials/total-price.twig' %}
+                </div>
+                <div class="col-1"></div>
+            </div>
+        {% else %}
+            {% include 'Cart/Presentation/tpl/partials/empty-cart.twig' %}
+        {% endif %}
+    </div>
+    </body>
+{% endblock %}

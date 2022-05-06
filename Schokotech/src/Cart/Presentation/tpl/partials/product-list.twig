@@ -1,0 +1,71 @@
+{% block productList %}
+<body>
+    <div class="row line-heading">
+        <div class="col-10">
+        </div>
+        <div class="col-1">
+            <b>Anzahl</b>
+        </div>
+        <div class="col-1">
+            <b>Preis</b>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form action="update-cart" method="post" id="amount">
+                <ul class="list-group list-group-flush">
+                    {% for cartItemTransfer in cartItemTransfers %}
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-2">
+                                    <a href={{  cartItemTransfer.seoUrl }}><img src="{{  cartItemTransfer.image }}" height="100" width="100"></a>
+                                </div>
+                                <div class="col-8 align-self-center">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="{{  cartItemTransfer.seoUrl }}" style="text-decoration: none; color:black; ">{{  cartItemTransfer.name }}</a>
+                                        </li>
+                                        <li>
+                                            {{  cartItemTransfer.price }}€
+                                        </li>
+                                        <li>
+                                            Inhalt: {{  cartItemTransfer.sizeName }}g
+                                        </li>
+                                        <li>
+                                            <button type="submit" value="{{ cartItemTransfer.sku }}" name="sku" form="remove-item" class="remove-item-from-cart-button">
+                                                Entfernen
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-1 d-flex justify-content-center align-self-center">
+                                    <label>
+                                        <select class="browser-default custom-select" name="amount[{{  cartItemTransfer.sku }}]">
+                                            <option {% if cartItemTransfer.amount == 1 %} selected {% endif %}value="1">1</option>
+                                            <option {% if cartItemTransfer.amount == 2 %} selected {% endif %}value="2">2</option>
+                                            <option {% if cartItemTransfer.amount == 3 %} selected {% endif %}value="3">3</option>
+                                            <option {% if cartItemTransfer.amount == 4 %} selected {% endif %}value="4">4</option>
+                                            <option {% if cartItemTransfer.amount == 5 %} selected {% endif %}value="5">5</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="col-1 d-flex justify-content-center align-self-center">
+                                    <br>{{  cartItemTransfer.totalPrice }}€ <br>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </form>
+            <form action="remove-item-from-cart" method="post" id="remove-item"></form>
+        </div>
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-auto">
+            <button type="submit" form="amount" class="update-cart-button">
+                Aktualisieren
+            </button>
+        </div>
+    </div>
+</body>
+{% endblock %}

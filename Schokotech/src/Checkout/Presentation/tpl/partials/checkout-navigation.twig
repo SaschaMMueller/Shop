@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <div class="container-fluid">
+                <ul class="checkout-steps-nav">
+                    {% for checkoutStep in checkoutSteps %}
+                        <li class="checkout-steps-nav-item">
+                            <div class="checkout-step-button {% if reachedCheckoutStep >= checkoutStep.stepNumber %} clickable {% endif %}{% if currentSeoUrl == checkoutStep.stepSeoUrl %} active {% endif %}">
+                                {% if reachedCheckoutStep >= checkoutStep.stepNumber %}<a href="{{ checkoutStep.stepSeoUrl }}">{% endif %}
+                                    <div class="checkout-step-button-circle">{{ checkoutStep.stepNumber }}</div>
+                                    <input type="button" class="checkout-step-button-link" value="{{ checkoutStep.stepName }}">
+                                    {% if checkoutSteps | last.stepNumber != checkoutStep.stepNumber %}
+                                        <div class="checkout-step-button-line"></div>
+                                    {% endif %}
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

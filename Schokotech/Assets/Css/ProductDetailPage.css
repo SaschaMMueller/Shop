@@ -1,0 +1,71 @@
+.product-detail-name {
+    font-size: 30pt;
+}
+
+.product-description {
+    font-size: 15pt;
+}
+
+.product-choice {
+    font-size: 15pt;
+}
+
+.product-price {
+    font-size: 20pt;
+}
+
+.add-to-cart-button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.add-to-cart-button:hover {
+    background-color: green;
+}
+
+.radio-button {
+    display: inline-block;
+    background-color: green;
+    padding: 4px 11px;
+    font-family: Arial;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.size-selector {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+.size-selector+label {
+    background-color: #F5F5DC;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.size-selector:checked +label {
+    background-color: #c8ccaa;
+}
+
+.radio-button:hover {
+    background-color: #fbffd5;
+}
+
+.breadcrumbs {
+    font-size: 10pt;
+    color: grey;
+}

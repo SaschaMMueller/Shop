@@ -1,0 +1,1 @@
+UPDATE url SET url_System = "Category/list" WHERE url_System = "Category/List";

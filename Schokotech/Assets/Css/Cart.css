@@ -1,0 +1,32 @@
+.empty-cart {
+    letter-spacing: 0.184em;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #F5F5DC;
+    padding: 10px 150px;
+    border-radius: 10px;
+}
+
+.remove-item-from-cart-button {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    line-height: 19px;
+    background-color: #FDFDFA;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.update-cart-button {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    line-height: 22px;
+    background-color: #FDFDFA;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.line-heading {
+    margin: 0;
+}

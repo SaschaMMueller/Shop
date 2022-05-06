@@ -1,0 +1,24 @@
+.header {
+    background-color: #F5F5DC;
+}
+
+.site-logo {
+    width: 145px;
+}
+
+.cart-logo {
+    width: 45px;
+}
+
+.white-space {
+    height: 35px;
+}
+
+.message {
+    background-color: #fcfcd6;
+    font-size: 17pt;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eaea8b;
+}

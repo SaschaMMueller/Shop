@@ -1,0 +1,37 @@
+version: "3.3"
+
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_USER=schokotech
+      - MYSQL_PASSWORD=1234
+      - MYSQL_DATABASE=ShopInventory
+    ports:
+    - 3307:3306
+    volumes:
+    - database:/var/lib/mysql:rw
+
+  php:
+#    image: php:7.4-apache
+    build:
+      context: .
+      dockerfile: cicd/container-images/php/Dockerfile
+#    entrypoint:
+#      - sleep
+#      - '2000000'
+    environment:
+      - MYSQL_DATABASE=ShopInventory
+      - MYSQL_USER=schokotech
+      - MYSQL_PASSWORD=1234
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html/Shop/Schokotech
+
+volumes:
+  database: {}
+  composer-vendor: {}

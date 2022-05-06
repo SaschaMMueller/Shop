@@ -1,0 +1,71 @@
+{% extends "Application/Presentation/tpl/layout.twig" %}
+
+{% block content %}
+
+    <head>
+        <script src="Assets/Js/ProductDetailPage.js"></script>
+    </head>
+
+    <div class="container-fluid">
+        <div class="row justify-content-start">
+            <div class="col-auto offset-1">
+                {% for breadcrumb in product.breadcrumbs %}
+                    <a class="breadcrumbs" href={{ breadcrumb.url }}>{{ breadcrumb.name }}</a>
+                    {% if not loop.last %}
+                        <span class="breadcrumbs">></span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="white-space"></div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="product-image">
+                    <img src= {{ product.imagePath }} height="400" width="400" />
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="product-detail-name">
+                    <label >{{ product.name }}</label>
+                </div>
+                <div class="product-description">
+                    <label >-{{ product.description }}</label>
+                </div>
+                <div class="product-choice">
+                    <p>Größe wählen:</p>
+                </div>
+                <form action="add-to-cart" method="post">
+                    {% for productVariant in product.productVariantsTransfers %}
+                        <input type="radio" class="size-selector" id="{{ productVariant.sku }}" value="{{ productVariant.sku }}" name="sku" data-price="{{ productVariant.price }}€">
+                        <label for="{{ productVariant.sku }}"class="radio-button">
+                            {{ productVariant.sizeName }}g
+                        </label>
+                    {% endfor %}
+                    <div class="row">
+                        <div class="col-4">
+                            <label>
+                                <select class="custom-select" id="blub" name="amount-pdp">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="product-price">
+                                <br><label>{{ product.productVariantsTransfers|first.price }}€</label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <br><br><button type="submit" class="add-to-cart-button">In den Warenkorb</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+ALTER TABLE category CHANGE id category_id INT( 100 ) NOT NULL AUTO_INCREMENT;
+ALTER TABLE product_abstract CHANGE id product_abstract_id INT( 100 ) NOT NULL AUTO_INCREMENT;
+ALTER TABLE product_to_category CHANGE id product_to_category_id INT( 100 ) NOT NULL AUTO_INCREMENT;
+ALTER TABLE price_type CHANGE id price_type_id INT( 100 ) NOT NULL AUTO_INCREMENT;
+ALTER TABLE product_price CHANGE id product_price_id INT( 100 ) NOT NULL AUTO_INCREMENT;
+ALTER TABLE product_purchasable CHANGE id product_purchasable_id INT( 100 ) NOT NULL AUTO_INCREMENT;
+ALTER TABLE language CHANGE id language_id INT( 100 ) NOT NULL AUTO_INCREMENT;
+ALTER TABLE category_localized_attributes CHANGE id category_localized_attributes_id INT( 100 ) NOT NULL AUTO_INCREMENT;
+ALTER TABLE product_localized_attributes CHANGE id product_localized_attributes_id INT( 100 ) NOT NULL AUTO_INCREMENT;
+ALTER TABLE database_migration_version CHANGE id database_migration_version_id INT( 100 ) NOT NULL AUTO_INCREMENT;

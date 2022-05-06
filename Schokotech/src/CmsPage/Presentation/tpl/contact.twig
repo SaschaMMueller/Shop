@@ -1,0 +1,17 @@
+{% extends "Application/Presentation/tpl/layout.twig" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+                {% for contact in contacts %}
+                    <b>{{contact.name}}</b></br>
+                    <b>{{contact.street}} {{contact.houseNumber}}</b></br>
+                    <b>{{contact.postalCode}} {{contact.city}}</b></br>
+                    <b>{{contact.telephoneNumber}}</b></br>
+                    <b>{{contact.email}}</b></br></br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% block totalPrice %}
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col align-self-end">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item summe">
+                        <h4><b>Summe</b></h4>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span><b>Gesamtsumme</b> <small>inkl. 19% MwSt</small></span>
+                        <b>{{ totalPrice }}€</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-auto">
+                <a href="customer-step">
+                    <button class="update-cart-button">
+                        Weiter zum Bezahlen
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
